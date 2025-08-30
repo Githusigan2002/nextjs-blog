@@ -1,4 +1,4 @@
-import mongoose, { model, models, Schema } from "mongoose";
+import mongoose, { model, Schema } from "mongoose";
 
 const postSchema = new Schema(
   {
@@ -11,8 +11,11 @@ const postSchema = new Schema(
   { toJSON: { virtuals: true } }
 );
 
+// postSchema.virtual("short_title").get(function () {
+//   return this.title.substring(0, 35) + "...";
+// });
 postSchema.virtual("short_desc").get(function () {
-  return this.description.substring(0, 50)+'...';
+  return this.description.substring(0, 20) + "...";
 });
 
 const postModel = mongoose.models.Post || model("Post", postSchema);

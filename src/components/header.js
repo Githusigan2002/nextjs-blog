@@ -7,14 +7,24 @@ export default function Header() {
         <div className="text-blue-600 font-bold font-mono">My-Blog</div>
       </Link>
       <div className="nav flex">
-        <Link className="text-blue-600 hover:text-blue-800 font-semibold" href="/blog">Blog</Link>
-        <Link className="text-blue-600 hover:text-blue-800 font-semibold" href="/about">About</Link>
-        <Link className="text-blue-600 hover:text-blue-800 font-semibold" href="/contact">Contact</Link>
-        <Link className="text-blue-600 hover:text-blue-800 font-semibold" href="/contact">Privacy Policy</Link>
-      </div>
-      <div>
-        <input type="text" className="border-blue-500 border-2 rounded-[5px]" />
-        <lable>Search</lable>
+        <Link
+          className="text-blue-600 hover:text-blue-800 font-semibold"
+          href="/about"
+        >
+          About
+        </Link>
+        <Link
+          className="text-blue-600 hover:text-blue-800 font-semibold"
+          href="/contact"
+        >
+          Contact
+        </Link>
+        <Link
+          className="text-blue-600 hover:text-blue-800 font-semibold"
+          href="/contact"
+        >
+          Privacy Policy
+        </Link>
       </div>
     </header>
   );
