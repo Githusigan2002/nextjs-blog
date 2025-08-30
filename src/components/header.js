@@ -19,12 +19,6 @@ export default function Header() {
         >
           Contact
         </Link>
-        <Link
-          className="text-blue-600 hover:text-blue-800 font-semibold"
-          href="/contact"
-        >
-          Privacy Policy
-        </Link>
       </div>
     </header>
   );
