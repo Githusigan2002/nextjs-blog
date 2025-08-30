@@ -11,11 +11,8 @@ const postSchema = new Schema(
   { toJSON: { virtuals: true } }
 );
 
-// postSchema.virtual("short_title").get(function () {
-//   return this.title.substring(0, 35) + "...";
-// });
 postSchema.virtual("short_desc").get(function () {
-  return this.description.substring(0, 20) + "...";
+  return this.description.substring(0, 100) + "...";
 });
 
 const postModel = mongoose.models.Post || model("Post", postSchema);
